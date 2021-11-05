@@ -87,15 +87,11 @@
     }
     initAccordion(){
       const thisProduct = this;
-      /* find the clickable trigger(the element that should react to clicking) */
-      // thisProduct.clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-      /* start: add event listener to clickable trigger on eventy click */
       thisProduct.accordionTrigeer.addEventListener('click', function(event){
         /* prevent default action for event */        
         event.preventDefault();
         /* find active product (product that has avtive class) */
         const activeProduct = document.querySelector(select.all.menuProductsActive);
-        console.log(activeProduct);
         /* if there is active product and it's not thisProduct.element , remove  */
         if(activeProduct && activeProduct!=thisProduct.element) {
           activeProduct.classList.remove(classNames.menuProduct.wrapperActive);
@@ -164,16 +160,13 @@
             }
             else{
               optionImage.classList.remove(classNames.menuProduct.imageVisible);
-
             }
           }
-
           //update calculated price in the HTML 
           thisProduct.priceElem.innerHTML = price;
         }
       }
     }
-
   }
   const app = {
     initMenu: function(){
