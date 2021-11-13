@@ -403,8 +403,6 @@
 
       thisCart.dom.totalNumber.innerHTML = thisCart.totalNumber;
       thisCart.dom.subtotalPrice.innerHTML = thisCart.subtotalPrice;
-      thisCart.dom.deliveryFee.innerHTML = deliveryFee;
-
     }
 
     remove(thisCartProduct) {
@@ -423,10 +421,10 @@
       const payload = {};
       payload.adress = thisCart.dom.address.value;
       payload.phone = thisCart.dom.phone.value;
-      payload.totalPrice = thisCart.totalPrice;
+      payload.totalNumber = thisCart.totalNumber;
       payload.subtotalPrice = thisCart.subtotalPrice;
-      payload.totalPrice = thisCart.totalPrice;
-      payload.deliveryFee = thisCart.deliveryFee;
+      payload.deliveryFee = settings.cart.defaultDeliveryFee;
+      payload.totalPrice = thisCart.totalPrice;      
       payload.products = [];
 
       for (let prod of thisCart.products) {
@@ -510,6 +508,7 @@
       const productData = {
         id: thisCartProduct.id,
         amount: thisCartProduct.id,
+
         price: thisCartProduct.price,
         priceSingle: thisCartProduct.priceSingle,
         name: thisCartProduct.name,
