@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" href="vendor/range-slider.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="screen">
-  <link rel="stylesheet" href="vendor/flickity.min.css">
+  <link rel="stylesheet" href="./vendor/flickity.min.css">
+
+  <link rel="stylesheet" href="./vendor/range-slider.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
   <header class="header">
@@ -26,9 +24,9 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
-          <a href="#home">Home</a>
         </div>
         <div id="cart" class="cart">
           <div class="cart__summary">
@@ -68,29 +66,30 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
     <section id="booking">
       <div class="booking-wrapper container"></div>
     </section>
-    <section id="home">
-      <div class="home-wrapper container"></div>
-    </section>
   </div>
 
+  <script id="template-home-widget" type="text/x-handlebars-template">
   <div class="home-container">
     <div class="options">
       <div class="order-online">
-        <a href="#order">
+        <a href="#/order">
           <h3>ORDER ONLINE</h3>
-          <p>Lorem ipsum</p>
+          <p>Delicious food deliver to your door</p>
         </a>
       </div>
       <div class="book-table">
-        <a href="book">
+        <a href="#/booking">
           <h3>BOOK TABLE</h3>
-          <p>Dolor sit amet</p>
+          <p>The best place, where you can have rest after work</p>
         </a>
       </div>
       <div class="opening-hours">
@@ -103,73 +102,73 @@
     <section class="carousel">
       <div class="carousel-element">
         <div class="carousel-image">
-          <img src="images/assets/pizza-3.jpg" alt="image">
+          <img src="images/carousel/pizza-3.jpg" alt="">
         </div>
         <div class="carousel-text">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum</p>
-          <p>Lorem ipsum</p>
+          <h3>lorem ipsum</h3>
+          <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+          <p>lorem ipsum</p>
         </div>
       </div>
       <div class="carousel-element">
         <div class="carousel-image">
-          <img src="images/assets/pizza-3.jpg" alt="image">
+          <img src="images/carousel/pizza-3.jpg" alt="">
         </div>
         <div class="carousel-text">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum</p>
-          <p>Lorem ipsum</p>
+          <h3>lorem ipsum</h3>
+          <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          <p>lorem ipsum</p>
         </div>
       </div>
       <div class="carousel-element">
         <div class="carousel-image">
-          <img src="images/assets/pizza-3.jpg" alt="image">
+          <img src="images/carousel/pizza-3.jpg" alt="">
         </div>
         <div class="carousel-text">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum</p>
-          <p>Lorem ipsum</p>
+          <h3>lorem ipsum</h3>
+          <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+          <p>lorem ipsum</p>
         </div>
       </div>
     </section>
     <section class="gallery">
       <div class="item">
-        <img src="images/assets/pizza-4.jpg" alt="image">
+        <img src="images/carousel/pizza-4.jpg" alt="">
         <ul class="over">
           <li><a href="#">ab<i class="fas fa-heart fa-2x"></i></a></li>
           <li><a href="#">ab<i class="fas fa-share-alt fa-2x"></i></a></li>
         </ul>
       </div>
       <div class="item">
-        <img src="images/assets/pizza-5.jpg" alt="image">
+        <img src="images/carousel/pizza-5.jpg" alt="">
         <ul class="over">
           <li><a href="#">ab<i class="fas fa-heart fa-2x"></i></a></li>
           <li><a href="#">ab<i class="fas fa-share-alt fa-2x"></i></a></li>
         </ul>
       </div>
       <div class="item">
-        <img src="images/assets/pizza-6.jpg" alt="image">
+        <img src="images/carousel/pizza-6.jpg" alt="">
         <ul class="over">
           <li><a href="#">ab<i class="fas fa-heart fa-2x"></i></a></li>
           <li><a href="#">ab<i class="fas fa-share-alt fa-2x"></i></a></li>
         </ul>
       </div>
       <div class="item">
-        <img src="images/assets/pizza-7.jpg" alt="image">
+        <img src="images/carousel/pizza-7.jpg" alt="">
         <ul class="over">
           <li><a href="#">ab<i class="fas fa-heart fa-2x"></i></a></li>
           <li><a href="#">ab<i class="fas fa-share-alt fa-2x"></i></a></li>
         </ul>
       </div>
       <div class="item">
-        <img src="images/assets/pizza-8.jpg" alt="image">
+        <img src="images/carousel/pizza-8.jpg" alt="">
         <ul class="over">
           <li><a href="#">ab<i class="fas fa-heart fa-2x"></i></a></li>
           <li><a href="#">ab<i class="fas fa-share-alt fa-2x"></i></a></li>
         </ul>
       </div>
       <div class="item">
-        <img src="images/assets/pizza-9.jpg" alt="image">
+        <img src="images/carousel/pizza-9.jpg" alt="">
         <ul class="over">
           <li><a href="#">ab<i class="fas fa-heart fa-2x"></i></a></li>
           <li><a href="#">ab<i class="fas fa-share-alt fa-2x"></i></a></li>
@@ -183,8 +182,6 @@
       </div>
     </footer>
   </div>
-
-  <script id="template-home-widget" type="text/x handlebars-template">
   </script>
 
   <script id="template-cart-product" type="text/x-handlebars-template">
@@ -352,18 +349,19 @@
           </div>
         </div>
         <div class="order-confirmation">
-          <input type="tel" name="phone" placeholder="Your phone">
+          <input type="tel" name="phone" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
           <input type="text" name="address" placeholder="Your address">
           <button type="submit" class="btn-secondary">Book table</button>
         </div>
       </form>
     </div>
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="vendor/range-slider.min.js"></script>
+  <script src="./vendor/range-slider.min.js"></script>
+  <script src="vendor/flickity.pkgd.min.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
-
 </html>
